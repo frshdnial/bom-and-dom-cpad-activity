@@ -159,24 +159,6 @@
  			</button>
  			</div>
 		</div>
-
-		<div class="card" id="left-panel">
- 			<h2>✏ Add a note</h2>
- 			<div class="form-group">
- 				<label>📌📌 Title *</label>
- 				<input type="text" id="noteTitle" placeholder="e.g., DOM practice">
- 			</div>
-
- 			<div class="form-group">
- 				<label>📝📝 Content</label>
- 				<textarea id="noteContent" rows="2"
- placeholder="Write something..."></textarea>
- 			</div>
-
- 			<button id="addNoteBtn">+ Add Note</button>
- 			<div class="counter" id="noteCounter">0 notes</div>
-		</div>
-
 	</div>
 
  	<script>
@@ -184,6 +166,15 @@
  		// ── STATE ──────────────────────────────────────────────
 		let notes = []; // each entry: { id, title, content }
 		let nextId = 1;
+		// ── DOM REFERENCES ────────────────────────────────────
+		const notesContainer = document.getElementById("notesContainer");
+		const titleInput = document.getElementById("noteTitle");
+		const contentInput = document.getElementById("noteContent");
+		const addBtn = document.getElementById("addNoteBtn");
+		const clearAllBtn = document.getElementById("clearAllBtn");
+		const noteCounterSpan = document.getElementById("noteCounter");
+		const windowSizeSpan = document.getElementById("windowSize");
+		const userAgentSpan = document.getElementById("userAgent");
  	</script>
 </body>
 </html>
