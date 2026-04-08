@@ -292,7 +292,10 @@
  			const w = window.innerWidth;
  			const h = window.innerHeight;
  		}
- 		
+
+ 		// BOM: resize event on the window object
+		window.addEventListener("resize", updateWindowSize);
+
  	</script>
 </body>
 </html>
